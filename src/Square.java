@@ -2,34 +2,34 @@ import java.awt.Color;
 import java.util.Random;
 
 public class Square extends Shape {
-	
+
 	private int shapeWidth;
-	
-	public Square(int shapeWidth){
-		// TODO Constructor
-		this.shapeWidth = shapeWidth;
+
+
+	public Square(int width){
+		this.shapeWidth = width ;
 	}
-	
-	
+
+
 	@Override
-	public Color getRandomColor() {		
-		// TODO Return random color produce from java.util.Random;
-		// Java 'Color' class takes 3 floats, from 0 to 1.
-		
-		// TODO Return color produced by three rgb floats.
+	public Color getRandomColor() {
+		Random rand = new Random();
+		float r = rand.nextFloat();
+		float g = rand.nextFloat();
+		float b = rand.nextFloat();
+		Color randomColor = new Color(r, g, b);
+
 		return new Color(r, g, b);
 	}
-	
+
 	@Override
 	public int getShapeWidth(){
-		// TODO Return Square width
-		return 0;
+		return shapeWidth ;
 	}
-	
+
 	@Override
 	public int getShapeHeight(){
-		// TODO Return Square height
-		return 0;
+		return shapeWidth ;
 	}
 
 
